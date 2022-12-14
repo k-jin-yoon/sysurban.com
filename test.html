@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .main {
+            min-height: 100vh;
+            padding: 4rem 0;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        span.mousepointer {
+            position: absolute;
+            pointer-events: none;
+        }
+
+        span.mousepointer::before {
+            content: '';
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            background: url('./public/images/logo.png');
+            background-color: white;
+            background-size: cover;
+            z-index: 99;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main"></div>
+    <script src="./public/lib/test.js"></script>
+</body>
+
+</html>
