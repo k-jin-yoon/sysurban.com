@@ -1,5 +1,6 @@
 :root {
   --main-color: rgba(127,27,125,1);
+  --main-shadow: rgba(127,27,125,.2);
   --sub-color: rgb(255,140,0);
   --sub-shadow: rgba(255,140,0,0.2);
 }
@@ -86,11 +87,11 @@ textarea {
   height: 6px;
 }
 *::-webkit-scrollbar-thumb {
-  background-color: #333;
+  background-color: var(--main-color);
   border-radius: 6px;
 }
 *::-webkit-scrollbar-track {
-  background-color: #999;
+  background-color: var(--main-shadow);
   border-radius: 6px;
   box-shadow: inset 0px 0px 2px white;
 }
