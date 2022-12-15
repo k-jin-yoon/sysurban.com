@@ -16,9 +16,9 @@ export default function NavBar(){
             <Link href="/contact">
                 <span className={router.pathname === "/contact" ? "active":""}> Contact </span>
             </Link>
-            <Link href="/movie">
+            {/* <Link href="/movie">
                 <span className={router.pathname === "/movie" ? "active":""}> Movie Test</span>
-            </Link>
+            </Link> */}
             <style jsx>{`
                 nav {
                     display: flex;
