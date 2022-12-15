@@ -3,10 +3,18 @@
   --sub-color: rgb(255,140,0)
 }
 
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap');
+
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+}
+
+::selection {
+  color: var(--main-color);
+  background: var(--sub-color);
+  text-shadow: none;
 }
 
 html,
@@ -14,15 +22,65 @@ body {
   padding: 0;
   margin: 0 auto;
   width: 100%;
-  font-family: 'Noto Sans KR', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: "Noto Sans KR", Helvetica, "Trebuchet MS", Verdana, sans-serif;
+  /* font-family: 'Noto Sans KR', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif; */
 }
 
 a {
   color: inherit;
   text-decoration: none;
+  background-color: transparent;
 }
 
+a:active,
+a:hover {
+  outline: 0;
+}
+
+h1 {
+  font-size: 2em;
+  margin: 0.6em 0;
+}
+
+h2 {
+  font-size: 1.6em;
+  margin: 0.8em 0;
+}
+
+h3 {
+  font-size: 1.4em;
+  margin: 1.0em 0;
+}
+
+h4 {
+  font-size: 1.2em;
+  margin: 1.2em 0;
+}
+
+h5 {
+  font-size: 1.0em;
+  margin: 1.4em 0;
+}
+
+h6 {
+  font-size: .8em;
+  margin: 1.6em 0;
+}
+
+img {
+  border: 0;
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  color: inherit; /* 1 */
+  font: inherit; /* 2 */
+  margin: 0; /* 3 */
+}
 
 @media (prefers-color-scheme: dark) {
   html {

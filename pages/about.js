@@ -28,7 +28,7 @@ export default function About(){
                 .container {
                     display: flex;
                     gap: 0;
-                    flex-direction: row;
+                    flex-direction: column;
                     align-items: center;
                     padding: 0;
                     height: 40px;
