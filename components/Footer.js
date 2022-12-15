@@ -20,7 +20,7 @@ export default function Footer(){
                     {/* <p>SYSURBAN</p> */}
                 </div>
                 <div className="copyright">
-                    <p>© SYSURBAN 2022</p>
+                    <p>© 2022 SYSURBAN ( SINCE 2021 )</p>
                 </div>
                 <div className="company">
                     <p><strong>주식회사 시스어반</strong></p>
@@ -57,7 +57,7 @@ export default function Footer(){
                 @media (prefers-color-scheme: dark) {
                     img {
                     }
-                  }
+                }
             `}</style>
         </>
     )

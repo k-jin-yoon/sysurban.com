@@ -7,11 +7,27 @@ export default function Home(){
             <Seo title="Home" />
             <div className="bg"></div>
             <div className="intro">
-                <h1><span className="welcome">Welcome to SYSURBAN</span></h1>
+                <h1 className="welcome">
+                    <span className="emphasize">S</span>
+                    <span className="emphasize">Y</span>
+                    <span className="emphasize">S</span>
+                    <span>E</span>
+                    <span>M</span>
+                    <span>S</span>
+                    <span> </span>
+                    <span>O</span>
+                    <span>F</span>
+                    <span> </span>
+                    <span className="emphasize">U</span>
+                    <span className="emphasize">R</span>
+                    <span className="emphasize">B</span>
+                    <span className="emphasize">A</span>
+                    <span className="emphasize">N</span>
+                </h1>
                 <div className="logo">
                     {/* <img src="/logo.png" /> */}
-                    <svg viewBox="0 0 1320 260">
-                        <text x="50%" y="200" dy="0" textAnchor="middle">SYSURBAN</text>
+                    <svg viewBox="0 0 1320 160">
+                        <text x="50%" y="50%" dy="0" textAnchor="middle">SYSURBAN</text>
                     </svg>
                 </div>
             </div>
@@ -49,38 +65,37 @@ export default function Home(){
                     border-radius: 20px;
                 }
                 h1 {
-                    color: var(--main-color);
+                    position: relative;
                     width: 100%;
                     padding: 20px;
                     letter-spacing: 2px;
                     text-align: center;
+                    font-size: 2rem;
+                    font-weight: 600;
                     background-color: rgba(0,0,0,0.25);
+                    text-transform: uppercase;
                 }
-                h1 > .welcome {
+                h1 > span {
                     position: relative;
-                    padding: 10px 20px;
-                    text-transform: uppercase;
+                    color: #777;
+                    font-weight: 800;
+                    padding: 2px 2px;
                 }
-                .logo {
-                    width: 100%;
-                    height: 160px;
-                    // background-color: rgba(255,255,255,0.5);
-                    background-color: rgba(0,0,0,0.5);
+                h1 > .emphasize {
+                    position: relative;
+                    color: var(--main-color);
+                    font-weight: 800;
                 }
-                svg {
-                    /* display: absolute; */
-                    width: 100%;
-                    max-height: 100%;
-                    padding: 20px;
-                    /* font-family: raleway; */
-                }
-                svg text {
-                    text-transform: uppercase;
-                    letter-spacing: 15px;
-                    font-size: 200px;
-                    font-weight: 700;
-                    animation: fontStroke 7s infinite alternate;
-                    /* transform: translate(-50%, -50%) */
+                h1 > .emphasize::before {
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    left: 50%;
+                    width: 5px;
+                    height: 5px;
+                    background-color: var(--sub-color);
+                    border-radius: 50%;
+                    transform: translateX(-50%);
                 }
                 .welcome:hover::before {
                     content: '';
@@ -102,70 +117,95 @@ export default function Home(){
                     border-right: 5px solid var(--sub-color);
                     border-bottom: 5px solid var(--sub-color);
                 }
+                .logo {
+                    width: 100%;
+                    height: 180px;
+                    background-color: rgba(0,0,0,0.35);
+                }
+                svg {
+                    width: 100%;
+                    max-height: 100%;
+                    padding: 20px;
+                    font-family: 'Arial Black';
+                }
+                svg text {
+                    text-transform: uppercase;
+                    letter-spacing: 15px;
+                    font-size: 160px;
+                    font-weight: 600;
+                    animation: fontStroke 10s infinite alternate;
+                    transform: translateY(50px)
+                }
+                
                 @keyframes fontStroke {
                     0% {
                         fill: rgba(127,27,125,1);
-                        stroke: rgba(127,27,125,0);
+                        // stroke: rgba(127,27,125,0);
+                        stroke: rgba(255,140,0,0);
                         stroke-width: 0;
                         stroke-dashoffset: -25%;
                         stroke-dasharray: 50% 0;
                     }
                     25% {
                         fill: rgba(127,27,125,0.25);
-                        stroke: rgba(127,27,125,1);
-                        stroke-width: 5;
+                        // stroke: rgba(127,27,125,1);
+                        stroke: rgba(255,140,0,1);
+                        stroke-width: 2;
                         stroke-dashoffset: 25%;
                         stroke-dasharray: 0 50%;
                     }
                     50% {
                         fill: rgba(127,27,125,0.25);
-                        stroke: rgba(127,27,125,1);
+                        // stroke: rgba(127,27,125,1);
+                        stroke: rgba(255,140,0,1);
                     }
                     60% {
                         fill: rgba(127,27,125,0.25);
-                        stroke: rgba(127,27,125,1);
-                        stroke-width: 7;
+                        // stroke: rgba(127,27,125,1);
+                        stroke: rgba(255,140,0,1);
+                        stroke-width: 3;
                     }
                     70% {
                         fill: rgba(127,27,125,0.25);
-                        stroke: rgba(127,27,125,1);
+                        // stroke: rgba(127,27,125,1);
+                        stroke: rgba(255,140,0,1);
                         
                     }
                     80% {
                         fill: rgba(127,27,125,0.25);
-                        stroke: rgba(127,27,125,1);
-                        stroke-width: 5;
+                        // stroke: rgba(127,27,125,1);
+                        stroke: rgba(255,140,0,1);
+                        stroke-width: 2;
                     }
                     90% {
                         fill: rgba(127,27,125,1);
-                        stroke: rgba(127,27,125,0);
+                        // stroke: rgba(127,27,125,0);
+                        stroke: rgba(255,140,0,0);
                         stroke-width: 0;
                         // stroke-dashoffset: -25%;
                         // stroke-dasharray: 50% 0;
                     }
                     100% {
                         fill: rgba(127,27,125,1);
-                        stroke: rgba(127,27,125,0);
+                        // stroke: rgba(127,27,125,0);
+                        // stroke: rgba(255,140,0,0);
                         stroke-width: 0;
                         stroke-dashoffset: -25%;
                         stroke-dasharray: 50% 0;
                     }
                 }
-                .movie {
-                    cursor: pointer;
+                @media screen and  (max-width: 480px) {
+                    .logo {
+                        width: 100%;
+                        height: 80px;
+                    }
                 }
-                .movie img {
-                    max-width: 100%;
-                    border-radius: 12px;
-                    transition: transform 0.2s ease-in-out;
-                    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
-                }
-                .movie:hover img {
-                    transform: scale(1.05) translateY(-10px);
-                }
-                .movie h4 {
-                    font-size: 18px;
-                    text-align: center;
+                @media (prefers-color-scheme: dark) {
+                    h1 > span {
+                        position: relative;
+                        color: #ccc;
+                        font-weight: 800;
+                    }
                 }
             `}</style>
         </div>
