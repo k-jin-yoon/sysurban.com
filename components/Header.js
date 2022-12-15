@@ -32,8 +32,8 @@ export default function Header(){
                 align-items: center;
                 padding: 12px 20px;
                 height: 80px;
-                box-shadow: rgba(50, 50, 50, 0.25) 0px 8px 10px 0px,
-                    rgba(0, 0, 0, 0.3) 0px 4px 10px -10px;
+                border-bottom: 1px solid rgba(50, 50, 50, 0.5);
+                box-shadow: 0 1px 8px 10px rgba(50, 50, 50, 0.25);
             }
             
             .logo-box {
@@ -72,6 +72,12 @@ export default function Header(){
                 transform: translate(-50%, -50%);
                 // background-color: white;
                 z-index: 9;
+            }
+            @media (prefers-color-scheme: dark) {
+                header {
+                    border-bottom: 1px solid rgba(150, 150, 150, 0.5);
+                    box-shadow: 0 1px 8px 10px rgba(150, 150, 150, 0.25);
+                }
             }
         `}</style>
         </>
