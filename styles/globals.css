@@ -1,6 +1,6 @@
 :root {
   --main-color: rgba(127,27,125,1);
-  /* --sub-color:  */
+  --sub-color: rgb(255,140,0)
 }
 
 * {
@@ -14,7 +14,7 @@ body {
   padding: 0;
   margin: 0 auto;
   width: 100%;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+  font-family: 'Noto Sans KR', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 

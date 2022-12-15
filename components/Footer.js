@@ -29,7 +29,8 @@ export default function Footer(){
             </footer>
             <style jsx>{`
                 * {
-                    line-height: 30px;
+                    font-size: .85rem;
+                    line-height: 28px;
                     vertical-align: middle;
                 }
                 footer {
@@ -49,15 +50,8 @@ export default function Footer(){
                 }
                 @media screen and  (max-width: 480px) {
                     footer {
-                        display: flex;
-                        gap: 10px;
                         flex-direction: column;
-                        align-items: center;
-                        justify-content: center;
-                        width: 100%;
-                        min-height: 80px;
-                        border-top: 1px solid rgba(190, 190, 190, 0.5);
-                        box-shadow: 0 -1px 8px 10px rgba(190, 190, 190, 0.25);
+                        padding: 20px 0;
                     }
                 }
                 @media (prefers-color-scheme: dark) {

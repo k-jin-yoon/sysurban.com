@@ -51,8 +51,8 @@ export default function Header(){
                 left: 0;
                 width: 16px;
                 height: 16px;
-                border-top: 5px solid orange;
-                border-left: 5px solid orange;
+                border-top: 5px solid var(--sub-color);
+                border-left: 5px solid var(--sub-color);
             }
             .logo-box:hover::after {
                 content: '';
@@ -61,8 +61,8 @@ export default function Header(){
                 bottom: 0;
                 width: 16px;
                 height: 16px;
-                border-right: 5px solid orange;
-                border-bottom: 5px solid orange;
+                border-right: 5px solid var(--sub-color);
+                border-bottom: 5px solid var(--sub-color);
             }
             img {
                 position: absolute;
