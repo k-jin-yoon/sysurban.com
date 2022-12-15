@@ -81,9 +81,36 @@ textarea {
   clear: both;
 }
 
+*::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+*::-webkit-scrollbar-thumb {
+  background-color: #333;
+  border-radius: 6px;
+}
+*::-webkit-scrollbar-track {
+  background-color: #999;
+  border-radius: 6px;
+  box-shadow: inset 0px 0px 2px white;
+}
+html {
+  scrollbar-track-color: var(--main-color);
+}
+
 @media (prefers-color-scheme: dark) {
+  *::-webkit-scrollbar-thumb {
+    background-color: var(--sub-color);
+    border-radius: 6px;
+  }
+  *::-webkit-scrollbar-track {
+    background-color: var(--sub-shadow);
+    border-radius: 6px;
+    box-shadow: inset 0px 0px 2px white;
+  }
   html {
     color-scheme: dark;
+    scrollbar-track-color: #eee;
   }
   body {
     color: #ccc;
