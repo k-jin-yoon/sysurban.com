@@ -2,7 +2,7 @@ import Seo from "../components/Seo";
 
 export default function Business(){
     return (
-        <div>
+        <div className="container">
             <Seo title="Business" />
             <h1>"Business Sysurban!!!"</h1>
             {/* 스마트시티 관련 시스템 개발 및 연구 */}

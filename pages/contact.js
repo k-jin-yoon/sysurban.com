@@ -2,7 +2,7 @@ import Seo from "../components/Seo";
 
 export default function About(){
     return (
-        <div>
+        <div className="container">
             <Seo title="Contact" />
             <h1>"Contact Sysurban!!!"</h1>
             {/* 오시는 길 -> 카카오맵 연동 */}
