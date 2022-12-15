@@ -11,6 +11,7 @@ export default function Home(){
                     <span className="emphasize">S</span>
                     <span className="emphasize">Y</span>
                     <span className="emphasize">S</span>
+                    <span>T</span>
                     <span>E</span>
                     <span>M</span>
                     <span>S</span>
