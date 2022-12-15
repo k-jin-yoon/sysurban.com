@@ -1,12 +1,22 @@
 import Link from 'next/link';
+import { useEffect, useState } from "react";
 import NavBar from './../components/NavBar';
 export default function Header(){
+    let [bgMode, setBgMode] = useState(true)
+    useEffect(() => {
+        const systemPrefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+        setBgMode(systemPrefersDark)
+    })
     return (
         <>
         <header>
             <Link href="/" className="link">
                 <div className="logo-box">
-                    <img src="/images/logo.png" />
+                {
+                    bgMode === true
+                    ? <img src="/images/logo_white.png" alt="SYSURBAN Logo"/>
+                    : <img src="/images/logo.png" alt="SYSURBAN Logo"/>
+                }
                 {/* <span className={router.pathname === "/" ? "active":""}> Home </span> */}
                 </div>
             </Link>

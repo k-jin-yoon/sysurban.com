@@ -1,15 +1,30 @@
+import { useEffect, useState } from "react";
+
 export default function Footer(){
+    let [bgMode, setBgMode] = useState(true)
+    useEffect(() => {
+        const systemPrefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+        setBgMode(systemPrefersDark)
+    })
     return (
         <>
             <footer>
-                <div className="company">
-                    <img src="/images/logo.png"/>
-                    <span><strong>주식회사 시스어반</strong></span>
-                    <span>SYSURBAN</span>
+                <div className="logo">
+                    <p>
+                        {
+                        bgMode === true
+                        ? <img src="/images/logo_white.png" alt="SYSURBAN Logo"/>
+                        : <img src="/images/logo.png" alt="SYSURBAN Logo"/>
+                        }
+                    </p>
+                    {/* <p>SYSURBAN</p> */}
                 </div>
-                <div>
-                    <span className="copyright">Copyright © SYSURBAN 2021</span>
-                    <span>경기도 평택시 고덕면 울성길 169-69, 103호</span>
+                <div className="copyright">
+                    <p>© SYSURBAN 2022</p>
+                </div>
+                <div className="company">
+                    <p><strong>주식회사 시스어반</strong></p>
+                    <p className="">경기도 평택시 고덕면 울성길 169-69, 103호</p>
                 </div>
             </footer>
             <style jsx>{`
@@ -22,18 +37,33 @@ export default function Footer(){
                     gap: 10px;
                     flex-direction: row;
                     align-items: center;
-                    justify-content: center;
+                    justify-content: space-around;
                     width: 100%;
-                    height: 80px;
+                    min-height: 80px;
                     border-top: 1px solid rgba(190, 190, 190, 0.5);
                     box-shadow: 0 -1px 8px 10px rgba(190, 190, 190, 0.25);
                 }
+                p {padding: 0 20px;}
                 img {
-                    width: 80px
+                    width: 100px;
                 }
-                span {
-                    padding: 10px 20px 0;
+                @media screen and  (max-width: 480px) {
+                    footer {
+                        display: flex;
+                        gap: 10px;
+                        flex-direction: column;
+                        align-items: center;
+                        justify-content: center;
+                        width: 100%;
+                        min-height: 80px;
+                        border-top: 1px solid rgba(190, 190, 190, 0.5);
+                        box-shadow: 0 -1px 8px 10px rgba(190, 190, 190, 0.25);
+                    }
                 }
+                @media (prefers-color-scheme: dark) {
+                    img {
+                    }
+                  }
             `}</style>
         </>
     )
