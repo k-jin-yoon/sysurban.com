@@ -1,6 +1,7 @@
+import Map from "../components/Map";
 import Seo from "../components/Seo";
 
-export default function About(){
+export default function Contact(){
     return (
         <div className="container">
             <Seo title="Contact" />
@@ -8,22 +9,30 @@ export default function About(){
             {/* 오시는 길 -> 카카오맵 연동 */}
             <div className="location">
                 <h4>오시는 길</h4>
+                <div>
+                    <h5>본사</h5>
+                    <p>사무실: 경기도 평택시 고덕면 울성길 169-69, 102호</p>
+                    <p>개발팀: 경기도 평택시 고덕면 울성길 169-69, 103호</p>
+                </div>
+                <hr />
+                <div>
+                    <h5>연구소</h5>
+                    <p>연구소: 경기도 안산시 | 수원시 예정</p>
+                </div>
             </div>
             {/* 오시는 길 -> 카카오맵 연동 */}
             <div className="kakaomap">
                 <h4>위치</h4>
-                <div></div>
+                <Map />
             </div>
             <style jsx>{`
                 .container {
                     display: flex;
-                    gap: 0;
-                    flex-direction: row;
-                    align-items: center;
-                    padding: 0;
-                    height: 40px;
+                    gap: 20px;
+                    flex-direction: column;
+                    align-items: start;
+                    justify-content: start;
                 }
-                
                 .active {
                     color: white;
                     background-color: rgba(127,27,125,1);
