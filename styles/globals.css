@@ -1,22 +1,16 @@
 :root {
   --main-color: rgba(127,27,125,1);
   --main-shadow: rgba(127,27,125,.2);
-  --sub-color: rgb(255,140,0);
+  --sub-color: rgba(255,140,0,1);
   --sub-shadow: rgba(255,140,0,0.2);
 }
 
 @import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap');
 
 * {
-  padding: 0;
   margin: 0;
+  padding: 0;
   box-sizing: border-box;
-}
-
-::selection {
-  color: var(--main-color);
-  background: var(--sub-color);
-  text-shadow: none;
 }
 
 html,
@@ -26,7 +20,7 @@ body {
   width: 100%;
   font-family: "Noto Sans KR", Helvetica, "Trebuchet MS", Verdana, sans-serif;
   /* font-family: 'Noto Sans KR', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif; */
+  Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif; */
 }
 
 a {
@@ -38,6 +32,12 @@ a {
 a:active,
 a:hover {
   outline: 0;
+}
+
+::selection {
+  color: var(--main-color);
+  background: var(--sub-color);
+  text-shadow: none;
 }
 
 h1 {
@@ -98,7 +98,15 @@ textarea {
 html {
   scrollbar-track-color: var(--main-color);
 }
-
+.text-center {
+  text-align: center;
+}
+.text-start {
+  text-align: left;
+}
+.text-end {
+  text-align: right;
+}
 @media (prefers-color-scheme: dark) {
   *::-webkit-scrollbar-thumb {
     background-color: var(--sub-color);

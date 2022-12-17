@@ -4,11 +4,20 @@ export default function Timeline(){
             <ul>
                 <li>
                     <div className="content">
+                        <h4>MOU체결</h4>
+                        <p>오성시스템 MOU 체결</p>
+                    </div>
+                    <div className="time">
+                        <h5>2022.09</h5>
+                    </div>
+                </li>
+                <li>
+                    <div className="content">
                         <h4>일‧생활 균형 캠페인 참여</h4>
                         <p>고용노동부 산하 일‧생활 균형 캠페인 참여기업 확인 완료</p>
                     </div>
                     <div className="time">
-                        <h5>2022.05.27</h5>
+                        <h5>2022.05</h5>
                     </div>
                 </li>
                 <li>
@@ -17,7 +26,7 @@ export default function Timeline(){
                         <p>산학연 특허 이전 및 등록(4종)</p>
                     </div>
                     <div className="time">
-                        <h5>2022.05.24</h5>
+                        <h5>2022.05</h5>
                     </div>
                 </li>
                 <li>
