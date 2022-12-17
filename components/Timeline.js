@@ -4,14 +4,27 @@ export default function Timeline(){
             <ul>
                 <li>
                     <div className="content">
-                        <h4>MOU체결</h4>
-                        <p>오성시스템 MOU 체결</p>
+                        <h4>MOU 체결</h4>
+                        <p>행정지원시스템 관련 업무제휴 협약체결<br/><small>(주식회사 오성시스템)</small></p>
                     </div>
                     <div className="time">
                         <h5>2022.09</h5>
                     </div>
                 </li>
                 <li>
+                    <div className="content">
+                        <h4>MOU 체결</h4>
+                        <p>문화콘텐츠 서비스 업무제휴 협약체결<br/><small>(주식회사 결)</small></p>
+                    </div>
+                    <div className="time">
+                        <h5>2022.06</h5>
+                    </div>
+                </li>
+                <li>
+                    <div className="content">
+                        <h4>특허 등록</h4>
+                        <p>산학연 특허 이전 및 등록(4종)</p>
+                    </div>
                     <div className="content">
                         <h4>일‧생활 균형 캠페인 참여</h4>
                         <p>고용노동부 산하 일‧생활 균형 캠페인 참여기업 확인 완료</p>
@@ -22,11 +35,20 @@ export default function Timeline(){
                 </li>
                 <li>
                     <div className="content">
-                        <h4>특허 등록</h4>
-                        <p>산학연 특허 이전 및 등록(4종)</p>
+                        <h4>연구용역 수행</h4>
+                        <p>평택시 중요자료 디지털 표준화 연구사업 수행</p>
                     </div>
                     <div className="time">
-                        <h5>2022.05</h5>
+                        <h5>2021.11</h5>
+                    </div>
+                </li>
+                <li>
+                    <div className="content">
+                        <h4>예약시스템 구축 및 유지보수</h4>
+                        <p>평택도시공사 예약시스템 구축 및 유지보수 사업수행</p>
+                    </div>
+                    <div className="time">
+                        <h5>2021.07</h5>
                     </div>
                 </li>
                 <li>
@@ -142,6 +164,7 @@ export default function Timeline(){
                         box-shadow: 0 0 0 4px var(--sub-shadow);
                     }
                     .timeline ul li .time {
+                        color: var(--main-color);
                         background-color: var(--sub-color);
                         box-shadow: 0 0 0 8px var(--sub-shadow);
                     }

@@ -78,10 +78,14 @@ textarea {
   margin: 0; /* 3 */
 }
 
+small {
+  font-size: 80%;
+}
+
 .clearfix {
   clear: both;
 }
-
+/* 210 : 297 = 200 : x */
 *::-webkit-scrollbar {
   width: 6px;
   height: 6px;
