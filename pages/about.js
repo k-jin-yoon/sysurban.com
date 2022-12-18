@@ -60,8 +60,8 @@ export default function About(){
                 }
                 .maxim {
                     margin: 20px;
-                    border-top: 1px solid var(--main-color);
-                    border-bottom: 1px solid var(--main-color);
+                    border-top: 2px solid var(--main-shadow);
+                    border-bottom: 2px solid var(--main-shadow);
                 }
                 .active {
                     color: white;
@@ -77,6 +77,12 @@ export default function About(){
                         padding-bottom: 10px;
                         box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
                             rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+                    }
+                }
+                @media (prefers-color-scheme: dark) {
+                    .maxim {
+                        border-top: 2px solid var(--sub-shadow);
+                        border-bottom: 2px solid var(--sub-shadow);
                     }
                 }
             `}</style>

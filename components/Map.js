@@ -79,6 +79,10 @@ const Map = () => {
                         font-size: 12px;
                         text-decoration: none;
                     }
+                    .box_seeker a:hover {
+                        color: white;
+                        background-color: var(--main-color);
+                    }
                     </style>
                     `
                 const position = new window.kakao.maps.LatLng(37.0123, 127.0576)
@@ -106,16 +110,21 @@ const Map = () => {
                 #map {
                     width: 800px;
                     height: 400px;
-                    border-radius: 12px;
+                    border-radius: 24px;
+                    border: 1px solid rgba(0,0,0,.5);
+                    box-shadow: 0 0 16px 4px rgba(0,0,0,.5);
                 }
-                
                 @media screen and  (max-width: 480px) {
                     #map {
                         width: 280px;
                         height: 300px;
                         border-radius: 12px;
-                        box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
-                            rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+                    }
+                }
+                @media (prefers-color-scheme: dark) {
+                    #map {
+                        border: 1px solid rgba(90,90,90,.5);
+                        box-shadow: 0 0 16px 4px rgba(255,255,255,.5);
                     }
                 }
             `}</style>

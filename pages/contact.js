@@ -9,15 +9,15 @@ export default function Contact(){
             {/* 오시는 길 -> 카카오맵 연동 */}
             <div className="location">
                 <h4>오시는 길</h4>
-                <div>
+                <div className="addr">
                     <h5>본사</h5>
                     <p>사무실: 경기도 평택시 고덕면 울성길 169-69, 102호</p>
                     <p>개발팀: 경기도 평택시 고덕면 울성길 169-69, 103호</p>
                 </div>
                 <hr />
-                <div>
+                <div className="addr">
                     <h5>연구소</h5>
-                    <p>연구소: 경기도 안산시 | 수원시 예정</p>
+                    <p>연구소: 경기도 (안산시 || 수원시) 예정</p>
                 </div>
             </div>
             {/* 오시는 길 -> 카카오맵 연동 */}
@@ -32,6 +32,18 @@ export default function Contact(){
                     flex-direction: column;
                     align-items: start;
                     justify-content: start;
+                }
+                h4 {
+                    margin: 20px 0;
+                }
+                .addr {
+                    padding: 12px 20px;
+                }
+                .addr h5 {
+                    margin: 12px 0;
+                }
+                .addr p {
+                    padding: 4px;
                 }
                 .active {
                     color: white;

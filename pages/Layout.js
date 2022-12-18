@@ -7,6 +7,7 @@ export default function Layout({ children }){
         <>
             <Header />
             <main className="main">{children}</main>
+            <div className="goto"><a href="#">위로 가기</a></div>
             <Footer />
             <style jsx>{`
             .main {
@@ -18,6 +19,23 @@ export default function Layout({ children }){
                 justify-content: center;
                 align-items: center;
                 // position: relative;
+              }
+              .goto {
+                position: fixed;
+                right: 40px;
+                bottom: 40px;
+                width: 80px;
+                height: 40px;
+                color: var(--main-color);
+                background-color: rgba(255,255,255,.5);
+                border: 5px solid var(--sub-shadow);
+                border-radius: 10px;
+              }
+              .goto a {
+                display: inline-block;
+                height: 30px;
+                line-height: 30px;
+                vertical-align: middle;
               }
               span.mousepointer {
                 position: absolute;
