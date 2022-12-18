@@ -112,7 +112,7 @@ const Map = () => {
                     height: 400px;
                     border-radius: 24px;
                     border: 1px solid rgba(0,0,0,.5);
-                    box-shadow: 0 0 16px 4px rgba(0,0,0,.5);
+                    box-shadow: 0 0 8px 4px rgba(0,0,0,.25);
                 }
                 @media screen and  (max-width: 480px) {
                     #map {
@@ -124,7 +124,7 @@ const Map = () => {
                 @media (prefers-color-scheme: dark) {
                     #map {
                         border: 1px solid rgba(90,90,90,.5);
-                        box-shadow: 0 0 16px 4px rgba(255,255,255,.5);
+                        box-shadow: 0 0 8px 4px rgba(255,255,255,.5);
                     }
                 }
             `}</style>
