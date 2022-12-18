@@ -21,7 +21,7 @@ export default function Verify(){
             <style jsx>{`
                 .verify {
                     position: relative;
-                    width: 700px;
+                    min-width: 480px;
                     margin: 0 auto;
                     padding: 0;
                 }
@@ -38,6 +38,7 @@ export default function Verify(){
                 }
                 .verify li div {
                     display: flex;
+                    flex-flow: row wrap;
                     flex-direction: row;
                     align-items: center;
                     justify-content: center;
@@ -50,16 +51,12 @@ export default function Verify(){
                     transform: scale(1.05) translateY(-5px);
                 }
                 @media screen and  (max-width: 480px) {
-                    .container {
-                        display: flex;
-                        gap: 10px;
-                        flex-direction: column;
-                        align-items: center;
-                        padding-top: 20px;
-                        padding-bottom: 10px;
-                        box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
-                            rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+                    .verify {
+                        min-width: 100%;
                     }
+                    // .verify li div {
+                    //     flex-direction: column;
+                    // }
                 }
                 @media (prefers-color-scheme: dark) {
                     

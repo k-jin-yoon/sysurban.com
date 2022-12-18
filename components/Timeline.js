@@ -65,7 +65,8 @@ export default function Timeline(){
             <style jsx>{`
                 .timeline {
                     position: relative;
-                    width: 700px;
+                    width: 100%;
+                    min-width: 740px;
                     margin: 0 auto;
                     padding: 0;
                 }
@@ -76,6 +77,9 @@ export default function Timeline(){
                     width: 2px;
                     height: 100%;
                     background-color: #999;
+                }
+                .timeline ul {
+                    width: 100%;
                 }
                 .timeline li {
                     list-style: none;
@@ -139,16 +143,14 @@ export default function Timeline(){
                     font-weight: 600;
                     color: var(--main-color);
                 }
+                @media screen and  (max-width: 760px) {
+                    .timeline {
+                        min-width: 480px;
+                    }
+                }
                 @media screen and  (max-width: 480px) {
-                    .container {
-                        display: flex;
-                        gap: 10px;
-                        flex-direction: column;
-                        align-items: center;
-                        padding-top: 20px;
-                        padding-bottom: 10px;
-                        box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
-                            rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+                    .timeline {
+                        min-width: 100%;
                     }
                 }
                 @media (prefers-color-scheme: dark) {

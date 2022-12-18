@@ -52,7 +52,7 @@ export default function About(){
                     gap: 20px;
                     flex-direction: column;
                     align-items: start;
-                    justify-content: start;
+                    justify-content: center;
                 }
                 .greeting p {
                     margin: 20px 30px;
@@ -75,8 +75,6 @@ export default function About(){
                         align-items: center;
                         padding-top: 20px;
                         padding-bottom: 10px;
-                        box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
-                            rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
                     }
                 }
                 @media (prefers-color-scheme: dark) {
