@@ -42,7 +42,7 @@ export default function Footer(){
                     width: 100%;
                     min-height: 80px;
                     border-top: 1px solid rgba(50, 50, 50, 0.5);
-                    box-shadow: 0 1px 8px 10px rgba(50, 50, 50, 0.25);
+                    box-shadow: 0 0 8px 4px rgba(50, 50, 50, 0.25);
                 }
                 p {padding: 0 20px;}
                 img {
@@ -57,7 +57,7 @@ export default function Footer(){
                 @media (prefers-color-scheme: dark) {
                     footer {
                         border-top: 1px solid rgba(150, 150, 150, 0.5);
-                        box-shadow: 0 1px 8px 10px rgba(150, 150, 150, 0.25);
+                        box-shadow: 0 0 8px 4px rgba(150, 150, 150, 0.25);
                     }
                 }
             `}</style>
