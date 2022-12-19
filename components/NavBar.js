@@ -1,26 +1,51 @@
 import Link from 'next/link';
 import { useRouter } from "next/router";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faBarsStaggered, faAmbulance, faAnchor, } from "@fortawesome/free-solid-svg-icons";
+import { useEffect, useState } from 'react';
+
 export default function NavBar(){
     const router = useRouter();
+    const { width, height, isMobile } = getWindowSize();
+
+    const [isHidden, setIsHidden] = useState(false)
+    const changeTopMenu = () => {
+        isMobile
+        ? setIsHidden(!isHidden)
+        : ""
+    }
+    useEffect(() => {
+        if (width>480) {
+            setIsHidden(false);
+        } else {
+            setIsHidden(true);
+        }
+    }, [width]);
     return (
         <nav>
+            <div className={"topMenu"+(isHidden?" hidden":"")}>
             {/* <Link href="/">
                 <span className={router.pathname === "/" ? "active":""}> Home </span>
             </Link> */}
             <Link href="/about">
-                <span className={router.pathname === "/about" ? "active":""}> About </span>
+                <span className={router.pathname === "/about" ? "active":""}  onClick={(e)=>changeTopMenu(e)}> <FontAwesomeIcon icon={faBarsStaggered} />About </span>
             </Link>
             <Link href="/business">
-                <span className={router.pathname === "/business" ? "active":""}> Business </span>
+                <span className={router.pathname === "/business" ? "active":""}  onClick={e=> changeTopMenu(e)}> Business </span>
             </Link>
             <Link href="/contact">
-                <span className={router.pathname === "/contact" ? "active":""}> Contact </span>
+                <span className={router.pathname === "/contact" ? "active":""}  onClick={e=> changeTopMenu(e)}> Contact </span>
             </Link>
+            </div>
+            <div className="toggleMenu"  onClick={e=> changeTopMenu(e)}>
+                <FontAwesomeIcon icon={faBarsStaggered} />
+            </div>
+            
             {/* <Link href="/movie">
                 <span className={router.pathname === "/movie" ? "active":""}> Movie Test</span>
             </Link> */}
             <style jsx>{`
-                nav {
+                nav{
                     display: flex;
                     gap: 0;
                     flex-direction: row;
@@ -34,16 +59,30 @@ export default function NavBar(){
                 }
                 nav span {
                     font-weight: 600;
-                    font-size: 20px;
+                    font-size: 18px;
                     text-transform: uppercase;
                     padding: 10px 20px;
-                    transition: transform 0.2s ease-in-out;
+                    transition: border-bottom 0.2s ease-in-out;
                 }
                 span:not(.active):hover {
                     color: rgba(127,27,125,1);
                     border-bottom: 3px solid rgba(127,27,125,1);
-                    transform: scale(1.05) translateY(-10px);
                 }
+                .topMenu {
+                    position: relative;
+                    display: block;
+                    width: 100%;
+                    gap: 0;
+                    flex-direction: row;
+                    align-items: center;
+                }
+                .topMenu.hidden {
+                    display: none;
+                }
+                .toggleMenu {
+                    display: none;
+                }
+
                 .active {
                     color: white;
                     background-color: rgba(127,27,125,1);
@@ -54,13 +93,67 @@ export default function NavBar(){
                         gap: 10px;
                         flex-direction: column;
                         align-items: center;
-                        padding-top: 20px;
-                        padding-bottom: 10px;
-                        box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
-                            rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+                    }
+                    .topMenu {
+                        position: absolute;
+                        top: 80px;
+                        left: 20px;
+                        right: 20px;
+                        display: flex;
+                        width: calc(100% - 40px);
+                        // height: 200px;
+                        padding: 40px 0;
+                        gap: 40px;
+                        flex-direction: column;
+                        align-items: center;
+                        background-color: #222;
+                        transition: height 2s;
+                    }
+                    .topMenu.hidden {
+                        display: none;
+                        height: 0;
+                        transition: height 2s;
+                    }
+                    .toggleMenu {
+                        display: block;
+                        font-size: 30px;
+                        width: 40px;
+                        height: 40px;
+                        padding: 5px;
+                        line-height: 30px;
+                        text-align: center;
+                        vertical-align: middle;
+                        cursor: pointer;
                     }
                 }
             `}</style>
         </nav>
     )
 }
+
+export const getWindowSize = () => {
+    const [windowSize, setWindowSize] = useState({
+      width: 0,
+      height: 0,
+      isMobile: true
+    });
+  
+    useEffect(() => {
+      if (typeof window !== "undefined") {
+        const handleResize = () => {
+          setWindowSize({
+            width: window.innerWidth,
+            height: window.innerHeight,
+            isMobile: window.innerWidth>480?false:true
+          });
+        };
+  
+        window.addEventListener("resize", handleResize);
+        handleResize();
+        return () => window.removeEventListener("resize", handleResize);
+      } else {
+        return;
+      }
+    }, []);
+    return windowSize;
+};

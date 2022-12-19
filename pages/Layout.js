@@ -2,11 +2,7 @@ import Script from 'next/script';
 import Footer from '../components/Footer';
 import Header from './../components/Header';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {
-  faAnglesUp,
-  faAmbulance,
-  faAnchor,
-} from "@fortawesome/free-solid-svg-icons";
+import { faAnglesUp, faAmbulance, faAnchor, } from "@fortawesome/free-solid-svg-icons";
 
 export default function Layout({ children }){
     return (
@@ -15,10 +11,7 @@ export default function Layout({ children }){
             <main className="main">{children}</main>
             <div className="goto">
               <a href="#">
-                <FontAwesomeIcon
-                  icon={faAnglesUp}
-                  style={{fontSize:20, color:'orange'}}
-                />
+                <FontAwesomeIcon icon={faAnglesUp} />
               </a>
             </div>
             <Footer />
@@ -36,8 +29,8 @@ export default function Layout({ children }){
               .goto {
                 position: fixed;
                 right: 40px;
-                bottom: 40px;
-                width: 80px;
+                bottom: 20px;
+                width: 40px;
                 height: 40px;
                 color: var(--main-color);
                 background-color: rgba(255,255,255,.5);
@@ -52,11 +45,13 @@ export default function Layout({ children }){
                 text-align: center;
                 vertical-align: middle;
               }
+              .goto a svg {
+                font-size: 30px;
+              }
               span.mousepointer {
                 position: absolute;
                 pointer-events: none;
               }
-              
               span.mousepointer::after {
                 content: '★';
                 position: absolute;
@@ -68,6 +63,24 @@ export default function Layout({ children }){
                 background-size: cover;
                 z-index: 9999;
               }
+
+              @media screen and  (max-width: 480px) {
+                .goto {
+                  right: 20px;
+                  bottom: 20px;
+                  width: 30px;
+                  height: 30px;
+                }
+                .goto a {
+                  height: 20px;
+                  line-height: 20px;
+                  text-align: center;
+                  vertical-align: middle;
+                }
+                .goto a svg {
+                  font-size: 20px;
+                }
+            }
             `}</style>
             {/* <Script
                 src="/lib/test.js"
