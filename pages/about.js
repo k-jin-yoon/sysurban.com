@@ -63,6 +63,9 @@ export default function About(){
                     border-top: 2px solid var(--main-shadow);
                     border-bottom: 2px solid var(--main-shadow);
                 }
+                .history {
+                    width: 100%;
+                }
                 .active {
                     color: white;
                     background-color: rgba(127,27,125,1);

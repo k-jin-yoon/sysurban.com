@@ -145,7 +145,7 @@ export default function Timeline(){
                 }
                 @media screen and  (max-width: 760px) {
                     .timeline {
-                        min-width: 480px;
+                        min-width: 100%;
                     }
                 }
                 @media screen and  (max-width: 480px) {

@@ -42,10 +42,12 @@ export default function Verify(){
                     flex-direction: row;
                     align-items: center;
                     justify-content: center;
+                    gap: 10px;
                 }
                 .verify li img {
-                    width: 180px;
-                    padding: 10px;
+                    width: 160px;
+                    padding: 8px;
+                    box-shadow: 0 0 8px 4px rgba(0,0,0,.25);
                 }
                 .verify li img:hover {
                     transform: scale(1.05) translateY(-5px);
@@ -54,12 +56,11 @@ export default function Verify(){
                     .verify {
                         min-width: 100%;
                     }
-                    // .verify li div {
-                    //     flex-direction: column;
-                    // }
                 }
                 @media (prefers-color-scheme: dark) {
-                    
+                    .verify li img {
+                        box-shadow: 0 0 8px 4px rgba(255,255,255,.25);
+                    }
                 }
             `}</style>
         </div>

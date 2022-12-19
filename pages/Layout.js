@@ -1,13 +1,26 @@
 import Script from 'next/script';
 import Footer from '../components/Footer';
 import Header from './../components/Header';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {
+  faAnglesUp,
+  faAmbulance,
+  faAnchor,
+} from "@fortawesome/free-solid-svg-icons";
 
 export default function Layout({ children }){
     return (
         <>
             <Header />
             <main className="main">{children}</main>
-            <div className="goto"><a href="#">위로 가기</a></div>
+            <div className="goto">
+              <a href="#">
+                <FontAwesomeIcon
+                  icon={faAnglesUp}
+                  style={{fontSize:20, color:'orange'}}
+                />
+              </a>
+            </div>
             <Footer />
             <style jsx>{`
             .main {
@@ -33,8 +46,10 @@ export default function Layout({ children }){
               }
               .goto a {
                 display: inline-block;
+                width: 100%;
                 height: 30px;
                 line-height: 30px;
+                text-align: center;
                 vertical-align: middle;
               }
               span.mousepointer {
