@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import { useRouter } from "next/router";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBarsStaggered, faAmbulance, faAnchor, } from "@fortawesome/free-solid-svg-icons";
+import { faBarsStaggered, faBuilding, faCity, faEarthAsia, } from "@fortawesome/free-solid-svg-icons";
 import { useEffect, useState } from 'react';
 
 export default function NavBar(){
@@ -28,13 +28,13 @@ export default function NavBar(){
                 <span className={router.pathname === "/" ? "active":""}> Home </span>
             </Link> */}
             <Link href="/about">
-                <span className={router.pathname === "/about" ? "active":""}  onClick={(e)=>changeTopMenu(e)}> <FontAwesomeIcon icon={faBarsStaggered} />About </span>
+                <span className={router.pathname === "/about" ? "active":""}  onClick={(e)=>changeTopMenu(e)}> <FontAwesomeIcon icon={faBuilding} /> About </span>
             </Link>
             <Link href="/business">
-                <span className={router.pathname === "/business" ? "active":""}  onClick={e=> changeTopMenu(e)}> Business </span>
+                <span className={router.pathname === "/business" ? "active":""}  onClick={e=> changeTopMenu(e)}> <FontAwesomeIcon icon={faCity} /> Business </span>
             </Link>
             <Link href="/contact">
-                <span className={router.pathname === "/contact" ? "active":""}  onClick={e=> changeTopMenu(e)}> Contact </span>
+                <span className={router.pathname === "/contact" ? "active":""}  onClick={e=> changeTopMenu(e)}> <FontAwesomeIcon icon={faEarthAsia} /> Contact </span>
             </Link>
             </div>
             <div className="toggleMenu"  onClick={e=> changeTopMenu(e)}>

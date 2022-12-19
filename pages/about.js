@@ -1,6 +1,8 @@
 import Seo from "../components/Seo";
 import Timeline from "../components/Timeline";
 import Verify from "../components/Verify";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faQuoteLeft, faQuoteRight, faCity, faEarthAsia, } from "@fortawesome/free-solid-svg-icons";
 
 export default function About(){
     return (
@@ -12,16 +14,22 @@ export default function About(){
                 <h2>인사말</h2>
                 <div className="maxim">
                     <p className="text-center">
-                        "과거로부터 배우고 현재를 살며 내일을 꿈꿔라.<br/>
-                        중요한 것은 질문을 멈추지 않는 것이다."
+                        <FontAwesomeIcon color="orange" icon={faQuoteLeft} /> 
+                         &nbsp; 과거로부터 배우고 현재를 살며 내일을 꿈꿔라.<br/>
+                        중요한 것은 질문을 멈추지 않는 것이다.<br />
+                        호기심은 자체만으로도 존재하는 이유가 있다. 
+                         &nbsp; <FontAwesomeIcon color="orange" icon={faQuoteRight} />
+                         {/*Learn from yesterday, live for today, hope for tomorrow.
+                        The important thing is not to stop questioning.
+                        Curiosity has its own reason for existing.  */}
                     </p>
                     <p className="text-end">
-                        - 알베르트 아인슈타인
+                        - Albert Einstein
                     </p>
                 </div>
                 <div>
                     <p>
-                        시스어반에서는 <br/>
+                        <strong>시스어반</strong>에서는 <br/>
                         지속가능한 스마트시티를 구현하기 위한 다양한 솔루션을 연구하고 있습니다.<br/>
                         또한 전세계의 다양한 솔루션을 벤치마킹하여 국내의 실정에 맞게 개선하는데 노력하고 있습니다.<br/>
                     </p>

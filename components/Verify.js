@@ -27,6 +27,9 @@ export default function Verify(){
                 }
                 .verify::before {
                 }
+                .content {
+                    margin: 20px 0;
+                }
                 .verify li {
                     list-style: none;
                     padding: 10px;
