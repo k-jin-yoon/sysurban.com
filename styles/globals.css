@@ -3,6 +3,9 @@
   --main-shadow: rgba(127,27,125,.2);
   --sub-color: rgba(255,140,0,1);
   --sub-shadow: rgba(255,140,0,0.2);
+  --box-shadow: 0 0 8px 4px rgba(50,50,50,.2);
+  --border: 1px solid rgba(190,190,190,1);
+  --border-radius: 12px;
 }
 
 @import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap');
