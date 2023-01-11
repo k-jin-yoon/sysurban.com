@@ -20,7 +20,7 @@ export default function Business(){
                 <div className="card">
                     <h4>에코시티</h4>
                     <p>지속가능한 친환경 도시를 만들기 위한 다양한 솔루션 제공</p>
-                    <p className="goal">목표달성율</p>
+                    <p className="goal">진행율</p>
                     <div className="bar-chart">
                         <span className="bar" style={{"width":`${goal[0]}%`}}></span>
                         <span className="tooltip">{goal[0]}%</span>
@@ -29,7 +29,7 @@ export default function Business(){
                 <div className="card">
                     <h4>스마트리빙랩 플랫폼</h4>
                     <p>시민참여로 나의 도시를 만들어가는 블록체인 기반의 스마트리빙랩 플랫폼 구축</p>
-                    <p className="goal">목표달성율</p>
+                    <p className="goal">진행율</p>
                     <div className="bar-chart">
                         <span className="bar" style={{"width":`${goal[1]}%`}}></span>
                         <span className="tooltip">{goal[1]}%</span>
@@ -42,6 +42,7 @@ export default function Business(){
                 <div className="card">
                     <h4>차세대 신분증 스캐너</h4>
                     <p>모바일신분증(주민등록증, 운전면허증, 여권 등), 기존 신분증, QR 코드 인식, 지문스캐너</p>
+                    <p className="goal">진행율</p>
                     <div className="bar-chart">
                         <span className="bar" style={{"width":`${goal[2]}%`}}></span>
                         <span className="tooltip">{goal[2]}%</span>
@@ -50,6 +51,7 @@ export default function Business(){
                 <div className="card">
                     <h4>리플릿관리기</h4>
                     <p>담당부서별 많은 종류의 홍보 전단지와 포스터로 유효기간의 관리와 교체가 번거로움을 해결한 홍보물 통합 키오스크</p>
+                    <p className="goal">진행율</p>
                     <div className="bar-chart">
                         <span className="bar" style={{"width":`${goal[3]}%`}}></span>
                         <span className="tooltip">{goal[3]}%</span>
@@ -88,11 +90,14 @@ export default function Business(){
                     border-radius: var(--border-radius);
                     transition: box-shadow .3s ease-in-out;
                 }
+                .card p {
+                    margin: 12px 20px 0;
+                }
                 .card:hover {
                     box-shadow: var(--box-shadow);
                 }
                 .goal {
-                    margin: 12px 20px 0;
+                    margin-left: 40px;
                 }
                 .bar-chart {
                     position: relative;
@@ -112,7 +117,7 @@ export default function Business(){
                 .bar-chart span.tooltip {
                     display: none;
                     position: absolute;
-                    top: 0;
+                    top: -20px;
                     right: 0;
                 }
                 .card:hover span.tooltip {
