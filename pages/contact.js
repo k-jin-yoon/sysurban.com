@@ -7,7 +7,7 @@ export default function Contact(){
     return (
         <div className="container">
             <Seo title="Contact" />
-            <h1>"Contact Sysurban!!!"</h1>
+            <h1 className="hidden">"Contact Sysurban!!!"</h1>
             {/* 오시는 길 -> 카카오맵 연동 */}
             <div className="location">
                 <h4>오시는 길</h4>

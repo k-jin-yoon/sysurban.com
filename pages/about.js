@@ -8,7 +8,7 @@ export default function About(){
     return (
         <div className="container">
             <Seo title="About" />
-            <h1>"About Sysurban!!!"</h1>
+            <h1 className="hidden">"About Sysurban!!!"</h1>
             {/* 간단한 인사말 쓰기 */}
             <div className="greeting">
                 <h2>인사말</h2>

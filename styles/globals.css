@@ -114,6 +114,9 @@ html {
 .text-end {
   text-align: right;
 }
+.hidden {
+  display: none;
+}
 @media (prefers-color-scheme: dark) {
   *::-webkit-scrollbar-thumb {
     background-color: var(--sub-color);
