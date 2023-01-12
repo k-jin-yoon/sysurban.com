@@ -4,7 +4,7 @@ import Image from 'next/image'
 import { useEffect, useState } from "react";
 
 export default function Business(){
-    let [goal, setGoal] = useState([30,40,100,90])
+    let [goal, setGoal] = useState([30,40,100,90,100,90,40])
     let [bgMode, setBgMode] = useState(true)
     useEffect(() => {
         const systemPrefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
@@ -38,7 +38,29 @@ export default function Business(){
             </div>
             {/* 행정지원시스템 개발 및 공급업 */}
             <div className="administration">
-                <h2>행정지원시스템 개발 및 공급</h2>
+                <h2>업무지원시스템 개발 및 공급</h2>
+                <div className="card">
+                    <h4>예약시스템</h4>
+                    <p>공공기관의 예약시스템 개발 및 유지관리</p>
+                    <p className="goal">진행율</p>
+                    <div className="bar-chart">
+                        <span className="bar" style={{"width":`${goal[2]}%`}}></span>
+                        <span className="tooltip">{goal[2]}%</span>
+                    </div>
+                </div>
+                <div className="card">
+                    <h4>문화콘텐츠 </h4>
+                    <p>담당부서별 많은 종류의 홍보 전단지와 포스터로 유효기간의 관리와 교체가 번거로움을 해결한 홍보물 통합 키오스크</p>
+                    <p className="goal">진행율</p>
+                    <div className="bar-chart">
+                        <span className="bar" style={{"width":`${goal[3]}%`}}></span>
+                        <span className="tooltip">{goal[3]}%</span>
+                    </div>
+                </div>
+            </div>
+            {/* 생산 제품 및 디자인 등등등 */}
+            <div className="product">
+                <h2>웹시스템 개발 및 위탁운영</h2>
                 <div className="card">
                     <h4>차세대 신분증 스캐너</h4>
                     <p>모바일신분증(주민등록증, 운전면허증, 여권 등), 기존 신분증, QR 코드 인식, 지문스캐너</p>
@@ -57,15 +79,20 @@ export default function Business(){
                         <span className="tooltip">{goal[3]}%</span>
                     </div>
                 </div>
-            </div>
-            {/* 생산 제품 및 디자인 등등등 */}
-            <div className="product">
-                <h2>웹시스템 개발 및 위탁운영</h2>
-                {
+                <div className="card">
+                    <h4>문화콘텐츠 플랫폼</h4>
+                    <p>한국적인 문화콘텐츠에 관련된 플랫폼을 구축 및 위탁운영</p>
+                    <p className="goal">진행율</p>
+                    <div className="bar-chart">
+                        <span className="bar" style={{"width":`${goal[6]}%`}}></span>
+                        <span className="tooltip">{goal[6]}%</span>
+                    </div>
+                </div>
+                {/* {
                     bgMode === true
                     ? <div><Image src="/images/windmill_white.svg" alt="windmill" className="cls-3" width={172} height={160}/><span>준비중</span></div>
                     : <div><Image src="/images/windmill.svg" alt="windmill" className="cls-3" width={172} height={160}/><span>준비중</span></div>
-                }
+                } */}
             </div>
             <style jsx>{`
                 .container {
