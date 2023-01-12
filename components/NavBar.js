@@ -87,7 +87,7 @@ export default function NavBar(){
                     color: white;
                     background-color: rgba(127,27,125,1);
                 }
-                @media screen and  (max-width: 480px) {
+                @media screen and  (max-width: 660px) {
                     nav {
                         display: flex;
                         gap: 10px;
