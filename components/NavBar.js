@@ -23,7 +23,7 @@ export default function NavBar(){
     }, [width]);
     return (
         <nav>
-            <div className={"topMenu"+(isHidden?" hidden":"")}>
+            <div className={"topMenu"+(isHidden?" hidden":"")} onClick={(e)=>changeTopMenu(e)}>
             {/* <Link href="/">
                 <span className={router.pathname === "/" ? "active":""}> Home </span>
             </Link> */}
@@ -52,6 +52,7 @@ export default function NavBar(){
                     align-items: center;
                     padding: 0;
                     height: 40px;
+                    z-index: 800;
                 }
                 img {
                     max-width: 100px;
@@ -70,10 +71,11 @@ export default function NavBar(){
                 }
                 .topMenu {
                     position: relative;
-                    display: block;
+                    display: flex;
                     width: 100%;
                     gap: 0;
                     flex-direction: row;
+                    justify-content: center;
                     align-items: center;
                 }
                 .topMenu.hidden {
@@ -99,6 +101,7 @@ export default function NavBar(){
                         top: 80px;
                         left: 20px;
                         right: 20px;
+                        bottom: 80px;
                         display: flex;
                         width: calc(100% - 40px);
                         // height: 200px;
@@ -108,6 +111,7 @@ export default function NavBar(){
                         align-items: center;
                         background-color: #222;
                         transition: height 2s;
+                        color: var(--sub-color);
                     }
                     .topMenu.hidden {
                         display: none;
