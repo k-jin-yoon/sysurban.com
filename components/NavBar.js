@@ -15,7 +15,7 @@ export default function NavBar(){
         : ""
     }
     useEffect(() => {
-        if (width>480) {
+        if (width>660) {
             setIsHidden(false);
         } else {
             setIsHidden(true);
