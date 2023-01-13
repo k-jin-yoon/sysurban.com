@@ -5,7 +5,7 @@ export default function Home(){
     return (
         <div className="container">
             <Seo title="Home" />
-            <div className="bg"></div>
+            <div className="bg"><a href="http://www.freepik.com" target="_blank"><small>Designed by <strong>GarryKillian</strong> / Freepik</small></a></div>
             <div className="intro">
                 <h1 className="welcome">
                     <span className="emphasize">S</span>
@@ -34,11 +34,15 @@ export default function Home(){
             </div>
             <style jsx>{`
                 .container {
+                    position: relative;
                     /* padding: 20px; */
+                    // top: -2rem;
+                    width: 100%;
+                    height: calc(100vh - 160px);
                 }
                 .bg {
                     position: absolute;
-                    top: 80px;
+                    top: 0;
                     left: 0;
                     right: 0;
                     bottom: 80px;
@@ -48,15 +52,24 @@ export default function Home(){
                     background-position: center center;
                     background-size: cover;
                     background-repeat: no-repeat;
-                    opacity: 0.25;
-                    z-index: -1;
+                    // opacity: 0.25;
+                    // z-index: -1;
+                }
+                .bg a {
+                    position: absolute;
+                    bottom: 20px;
+                    right: 20px;
+                    color: var(--main-color);
+                    background-color: var(--light-shadow);
+                    padding: 4px 8px;
+                    border-radius: 12px;
                 }
                 .intro {
                     position: absolute;
-                    top: 100px;
+                    top: 50%;
                     left: 20px;
                     right: 20px;
-                    bottom: 100px;
+                    height: 50%;
                     display: flex;
                     flex-direction: column;
                     justify-content: center;
@@ -64,6 +77,7 @@ export default function Home(){
                     gap: 20px;
                     background-color: rgba(255,255,255,0.75)
                     border-radius: 20px;
+                    transform: translateY(-50%);
                 }
                 h1 {
                     position: relative;
@@ -195,7 +209,7 @@ export default function Home(){
                         stroke-dasharray: 50% 0;
                     }
                 }
-                @media screen and  (max-width: 480px) {
+                @media screen and  (max-width: 660px) {
                     .logo {
                         width: 100%;
                         height: 80px;

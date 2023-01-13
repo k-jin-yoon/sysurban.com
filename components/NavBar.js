@@ -148,7 +148,7 @@ export const getWindowSize = () => {
           setWindowSize({
             width: window.innerWidth,
             height: window.innerHeight,
-            isMobile: window.innerWidth>480?false:true
+            isMobile: window.innerWidth>660?false:true
           });
         };
   

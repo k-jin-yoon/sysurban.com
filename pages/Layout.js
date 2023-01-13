@@ -1,24 +1,46 @@
 import Script from 'next/script';
 import Footer from '../components/Footer';
 import Header from './../components/Header';
+import { useEffect, useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAnglesUp, faAmbulance, faAnchor, } from "@fortawesome/free-solid-svg-icons";
 
 export default function Layout({ children }){
+  const [scrolled, setScrolled] = useState(false);
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll, { capture: true }); // 스크롤 이벤트 등록
+    console.log('scrolled : '+ scrolled)
+    return () => {
+      window.removeEventListener('scroll', handleScroll); 		// 스크롤 이벤트 제거
+    };
+  }, []);
+  const handleScroll = ()=>{
+    if(window.scrollY >= 50){
+      setScrolled(true)
+    } else {
+      setScrolled(false)
+    }
+  }
     return (
         <>
             <Header />
             <main className="main">{children}</main>
-            <div className="goto">
-              <a href="#">
-                <FontAwesomeIcon icon={faAnglesUp} />
-              </a>
-            </div>
+            {
+              // children.type.name == 'Home' && scrolled == false
+              scrolled == false
+              ? <div></div>
+              : <div className="goto">
+                  <a href="#">
+                    <FontAwesomeIcon icon={faAnglesUp} />
+                  </a>
+                </div>
+            }
+            
             <Footer />
             <style jsx>{`
             .main {
                 min-height: calc(100vh - 160px);
-                padding: 2rem 0;
+                // padding: 2rem 0;
                 flex: 1;
                 display: flex;
                 flex-direction: column;

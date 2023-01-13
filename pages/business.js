@@ -111,6 +111,7 @@ export default function Business(){
                     flex-direction: column;
                     align-items: center;
                     justify-content: center;
+                    padding: 2rem 1rem;
                 }
                 .container div {
                     width: 90%;

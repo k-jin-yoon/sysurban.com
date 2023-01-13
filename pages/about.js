@@ -61,6 +61,7 @@ export default function About(){
                     flex-direction: column;
                     align-items: start;
                     justify-content: center;
+                    padding: 2rem 1rem;
                 }
                 .greeting p {
                     margin: 20px 30px;
