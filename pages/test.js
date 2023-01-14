@@ -3,21 +3,33 @@ import Seo from "../components/Seo";
 import Image from 'next/image'
 import { useEffect, useState } from "react";
 
-export default function Business(){
+export default function Business({}){
     let [process, setprocess] = useState([15,25,100,100,90,40])
     let [bgMode, setBgMode] = useState(true)
+    async function bringData(){
+        const res = await fetch('http://localhost:3000/business.json', {
+            headers: {
+              Accept: "application/json",
+            },
+            method: "GET",
+          })
+        const testData = await res.json();
+        console.log(testData);
+        return testData
+    }
+    
+    bringData()
+    
     useEffect(() => {
         const systemPrefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
         setBgMode(systemPrefersDark)
-        fetch("data/business.json", {headers: {Accept: "application/json"}, method:"GET"})
-        .then(res => res.json()).then(data => {
-            return data
-        })
     })
+    
     return (
         <div className="container">
             <Seo title="Business" />
             <h1 className="hidden">"Business Sysurban!!!"</h1>
+           
             {/* 스마트시티 관련 시스템 개발 및 연구 */}
             <div className="business-field">
                 <h2>스마트시티 솔루션 개발 및 연구</h2>
@@ -211,4 +223,21 @@ export default function Business(){
             `}</style>
         </div>
     );
+}
+
+// export async function getServerSideProps() {
+//     const { results } = await (
+//       await fetch(`http://localhost:3000/data/business.json`)
+//     ).json();
+//     return {
+//       props: {
+//         results,
+//       },
+//     };
+// }
+
+export async function BringData(){
+    const res = await fetch('http://localhost:3000/data/business.json')
+    const data = await res.json()
+    return data
 }

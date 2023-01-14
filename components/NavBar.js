@@ -74,6 +74,7 @@ export default function NavBar(){
                     display: flex;
                     width: 100%;
                     gap: 0;
+                    color: var(--main-color);
                     flex-direction: row;
                     justify-content: center;
                     align-items: center;
