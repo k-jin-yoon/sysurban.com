@@ -15,32 +15,53 @@ export default function Biz(){
     
     return (
         <div className="biz">
-            {
+        {
             biz.map((item)=>{
-                return (
-                <div className="biz-field" key={item.id}>
-                    <Image src={item.image} alt="business image" width={300} height={206} />
-                    <h2>{item.title}</h2>
-                </div>
-                )
+                if(item.id % 2 == 0){
+                    return (
+                        <div className="biz-field" key={item.id}>
+                            <h2>{item.title}</h2>
+                            <Image src={item.image} alt="business image" width={300} height={206} />
+                        </div>
+                        )
+                } else {
+                    return (
+                        <div className="biz-field" key={item.id}>
+                            <Image src={item.image} alt="business image" width={300} height={206} />
+                            <h2>{item.title}</h2>
+                        </div>
+                    )
+                }
             })
+        }
+        <style jsx>{`
+            .biz {
+                display: flex;
+                gap: 20px;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
             }
-            <style jsx>{`
+            .biz-field {
+                display: flex;
+                gap: 20px;
+                flex-direction: row;
+                align-items: center;
+                justify-content: center;
+                width: 100%;
+                padding: 24px;
+                border: var(--border);
+            }
+            
+            @media screen and  (max-width: 660px) {
                 .biz-field {
-                    display: flex;
-                    gap: 20px;
-                    flex-direction: row;
-                    align-items: center;
-                    justify-content: center;
+                    flex-direction: column;
                 }
+            }
+            @media (prefers-color-scheme: dark) {
                 
-                @media screen and  (max-width: 480px) {
-                    
-                }
-                @media (prefers-color-scheme: dark) {
-                    
-                }
-            `}</style>
+            }
+        `}</style>
         </div>
     );
 }

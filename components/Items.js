@@ -20,10 +20,11 @@ export default function Items(){
                         <div className="card" key={item.id}>
                             <h4>{item.itemname}</h4>
                             <div className="pop">
+                                <h5>{item.itemname}</h5>
                                 <p>{item.description}</p>
                                 <p className="process">
                                     PROCESS : <span className="tooltip">{item.process}%</span><br/>
-                                    진행단계: {item.step}
+                                    Progress stage: {item.step}
                                 </p>
                                 <div className="bar-chart">
                                     <span className="bar" style={{"width":`${item.process}%`}}></span>
@@ -38,10 +39,12 @@ export default function Items(){
                     display: flex;
                     gap: 20px;
                     flex-direction: row;
-                    align-items: stretch;
+                    align-items: center;
                     justify-content: center;
+                    flex-wrap: wrap;
                 }
                 .card {
+                    min-width: 20%;
                     padding: 20px;
                     border: var(--border);
                     border-radius: var(--border-radius);
@@ -52,12 +55,12 @@ export default function Items(){
                 }
                 .pop {
                     display: none;
-                    position: absolute;
+                    position: fixed;
                     top: 50%;
                     left: 50%;
                     width: 50%;
-                    heigh: 300px;
-                    background-color: var(--light-color);
+                    heigh: 400px;
+                    background-color: var(--bright-color);
                     padding: 24px;
                     border-radius: var(--border-radius);
                     box-shadow: var(--box-shadow);
