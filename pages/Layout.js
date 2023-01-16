@@ -9,7 +9,6 @@ export default function Layout({ children }){
   const [scrolled, setScrolled] = useState(false);
   useEffect(() => {
     window.addEventListener('scroll', handleScroll, { capture: true }); // 스크롤 이벤트 등록
-    console.log('scrolled : '+ scrolled)
     return () => {
       window.removeEventListener('scroll', handleScroll); 		// 스크롤 이벤트 제거
     };
