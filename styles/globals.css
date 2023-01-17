@@ -10,6 +10,8 @@
   --box-shadow: 0 0 8px 4px rgba(50,50,50,.2);
   --border: 1px solid rgba(190,190,190,1);
   --border-radius: 12px;
+  --background: rgb(184,126,182);
+  --background: linear-gradient(30deg, rgba(184,126,182,1) 0%, rgba(127,27,125,1) 25%, rgba(127,27,125,1) 35%, rgba(237,173,232,1) 100%);
 }
 
 @import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap');

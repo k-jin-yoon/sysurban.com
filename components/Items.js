@@ -12,7 +12,6 @@ export default function Items() {
             })
     },[])
     let circumference = Math.round(100 * Math.PI * 2);
-
     return (
         <div className="biz-items">
             {
@@ -24,16 +23,17 @@ export default function Items() {
                                 <h5>{item.itemname}</h5>
                                 <p>{item.description}</p>
                                 <p className="progress">
-                                    Progress stage: {item.step}
+                                    Progress stage: <strong>{item.step}</strong>
                                 </p>
                                 <div className="pie-chart">
                                     <svg>
                                         <circle className="" cx="100" cy="100" r="100"></circle>
-                                        <circle className="" cx="100" cy="100" r="100" strokeDashoffset={`calc(${circumference}px - (${circumference}px*${item.process}/100)`}></circle>
+                                        <circle className="" cx="100" cy="100" r="100" strokeDashoffset={`calc(${circumference}px - (${circumference}px*${item.process}/102)`}></circle>
                                     </svg>
                                     <div className="process">
                                         <p>PROCESS</p>
                                         <h2> {item.process}<span>%</span></h2>
+                                        <div className="arrow" style={{transform: `rotate(${item.process * 3.6}deg)`}}>→</div>
                                     </div>
                                 </div>
                             </div>
@@ -65,6 +65,12 @@ export default function Items() {
                 .pie-chart svg circle:nth-child(2) {
                     stroke: var(--sub-color);
                     stroke-dasharray: ${circumference};
+                    // transform: rotate(-90deg);
+                }
+                .arrow {
+                    position: absolute;
+                    width: 180px;
+                    text-align: end;
                 }
                 .biz-items {
                     display: flex;
@@ -75,17 +81,20 @@ export default function Items() {
                     flex-wrap: wrap;
                 }
                 .card {
-                    min-width: 20%;
+                    width: 240px;
+                    height: 240px;
+                    // min-width: 25%;
                     padding: 20px;
                     border: var(--border);
                     border-radius: var(--border-radius);
                     transition: box-shadow .3s ease-in-out;
                 }
-                .card:hover {
-                    box-shadow: var(--box-shadow);
-                }
                 .card h4 {
                     text-align: center;
+                    line-height: 200px;
+                }
+                .card:hover {
+                    box-shadow: var(--box-shadow);
                 }
                 .pop {
                     display: none;
@@ -94,6 +103,7 @@ export default function Items() {
                     left: 50%;
                     width: 50%;
                     heigh: 400px;
+                    min-width: 260px;
                     background-color: var(--glass-color);
                     padding: 24px;
                     border-radius: var(--border-radius);

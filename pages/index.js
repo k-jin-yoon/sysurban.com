@@ -5,7 +5,8 @@ export default function Home(){
     return (
         <div className="container">
             <Seo title="Home" />
-            <div className="bg"><a href="http://www.freepik.com" target="_blank"><small>Designed by <strong>GarryKillian</strong> / Freepik</small></a></div>
+            <div className="bg"></div>
+            <div className="bg-image"><a href="http://www.freepik.com" target="_blank"><small>Designed by <strong>GarryKillian</strong> / Freepik</small></a></div>
             <div className="intro">
                 <h1 className="welcome">
                     <span className="emphasize">S</span>
@@ -47,22 +48,34 @@ export default function Home(){
                     right: 0;
                     bottom: 80px;
                     height: calc(100vh - 160px);
-                    background-color: white;
-                    background-image: url('/images/main_bg.jpg');
+                    background: var(--background);
+                    opacity: 0.75;
+                    // z-index: -1;
+                }
+                .bg-image {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    bottom: 80px;
+                    height: calc(100vh - 160px);
+                    background-image: url('/images/main_bg.png');
                     background-position: center center;
                     background-size: cover;
                     background-repeat: no-repeat;
                     // opacity: 0.25;
                     // z-index: -1;
                 }
-                .bg a {
+                .bg-image a {
                     position: absolute;
                     bottom: 20px;
                     right: 20px;
                     color: var(--main-color);
-                    background-color: var(--light-shadow);
                     padding: 4px 8px;
                     border-radius: 12px;
+                    background-color: var(--glass-color);
+                    backdrop-filter: blur(8px);
+                    box-shadow: var(--box-shadow);
                 }
                 .intro {
                     position: absolute;
@@ -87,8 +100,10 @@ export default function Home(){
                     text-align: center;
                     font-size: 2rem;
                     font-weight: 600;
-                    background-color: rgba(0,0,0,0.25);
                     text-transform: uppercase;
+                    background-color: var(--glass-color);
+                    backdrop-filter: blur(8px);
+                    box-shadow: var(--box-shadow);
                 }
                 h1 > span {
                     position: relative;
@@ -135,7 +150,9 @@ export default function Home(){
                 .logo {
                     width: 100%;
                     height: 180px;
-                    background-color: rgba(0,0,0,0.35);
+                    background-color: var(--glass-color);
+                    backdrop-filter: blur(4px);
+                    box-shadow: var(--box-shadow);
                 }
                 svg {
                     width: 100%;
