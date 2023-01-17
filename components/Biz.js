@@ -11,7 +11,7 @@ export default function Biz(){
         .then(result => {
             setBiz(result)
         })
-    })
+    },[])
     
     return (
         <div className="biz">

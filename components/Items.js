@@ -10,7 +10,7 @@ export default function Items() {
             .then(result => {
                 setItems(result)
             })
-    })
+    },[])
     let circumference = Math.round(100 * Math.PI * 2);
 
     return (
