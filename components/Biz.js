@@ -4,6 +4,11 @@ import { useEffect, useState } from 'react';
 export default function Biz(){
     const [biz, setBiz] = useState([]);
     const API_URL = `/api/bizData`;
+    let [bgMode, setBgMode] = useState(true)
+    useEffect(() => {
+        const systemPrefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+        setBgMode(systemPrefersDark)
+    })
     
     useEffect(()=>{
         fetch(API_URL)
@@ -21,13 +26,21 @@ export default function Biz(){
                     return (
                         <div className="biz-field" key={item.id}>
                             <h2>{item.title}</h2>
-                            <Image src={item.image} alt="business image" width={300} height={206} />
+                            {
+                            bgMode === true
+                            ?<Image src={item.image_dark} alt="business image" width={200} height={118} />
+                            :<Image src={item.image_light} alt="business image" width={200} height={118} />
+                            }
                         </div>
                         )
                 } else {
                     return (
                         <div className="biz-field" key={item.id}>
-                            <Image src={item.image} alt="business image" width={300} height={206} />
+                            {
+                            bgMode === true
+                            ?<Image src={item.image_dark} alt="business image" width={200} height={118} />
+                            :<Image src={item.image_light} alt="business image" width={200} height={118} />
+                            }
                             <h2>{item.title}</h2>
                         </div>
                     )
@@ -47,7 +60,7 @@ export default function Biz(){
                 gap: 20px;
                 flex-direction: row;
                 align-items: center;
-                justify-content: center;
+                justify-content: space-between;
                 width: 100%;
                 padding: 24px;
                 border: var(--border);
