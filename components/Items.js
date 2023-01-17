@@ -58,7 +58,7 @@ export default function Items() {
                     height: 100%;
                     fill: none;
                     stroke-width: 10;
-                    stroke: rgba(255,255,255,1);
+                    stroke: rgba(210,210,210,.5);
                     transform: translate(5px, 5px);
                     stroke-linecap: round;
                 }
@@ -166,8 +166,11 @@ export default function Items() {
                     }
                 }
                 @media (prefers-color-scheme: dark) {
-                    .card li img {
-                        box-shadow: 0 0 8px 4px rgba(255,255,255,.25);
+                    .pie-chart svg circle {
+                        stroke: rgba(255,255,255,.5);
+                    }
+                    .process {
+                        color: var(--sub-color);
                     }
                 }
             `}</style>
