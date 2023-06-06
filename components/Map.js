@@ -10,7 +10,7 @@ const Map = () => {
 
         $script.addEventListener("load", () => {
             window.kakao.maps.load(()=>{
-                const seekerUrl = "https://map.kakao.com/link/to/시스어반,37.0123,127.0576"
+                const seekerUrl = "https://map.kakao.com/link/to/시스어반,37.0123509,127.0578256"
                 const content = 
                     `<div class="arrow_box">
                         <div class="box_logo">
@@ -85,20 +85,27 @@ const Map = () => {
                     }
                     </style>
                     `
-                const position = new window.kakao.maps.LatLng(37.0123, 127.0576)
+                const position = new window.kakao.maps.LatLng(37.0123509, 127.0578256)
                 const mapContainer = document.getElementById("map");
                 const mapOption = {
                     center: position,
                     level: 3
                 }
                 const customOverlay = new window.kakao.maps.CustomOverlay({
-                    position: new window.kakao.maps.LatLng(37.0126, 127.05785),
+                    position: new window.kakao.maps.LatLng(37.0124, 127.0578),
                     content: content,
                     xAnchor: 0.5,
                     yAnchor: 1.3
                 });
                 const map = new window.kakao.maps.Map(mapContainer, mapOption);
                 customOverlay.setMap(map);
+
+                new kakao.maps.event.addListener(map, 'click', function(mouseEvent){
+                    let latlng = mouseEvent.latLng;
+                    let message = `클릭한 위치의 위도는 ${latlng.getLat()} 이고, 경도는 ${latlng.getLng()} 입니다.`;
+                    console.log(message);
+                })
+                
             })
         })
     }, []);
