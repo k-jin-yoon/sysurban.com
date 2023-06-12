@@ -28,8 +28,8 @@ export default function Biz(){
                             <h2>{item.title}</h2>
                             {
                             bgMode === true
-                            ?<Image src={item.image_dark} alt={item.title} width={200} height={118} />
-                            :<Image src={item.image_light} alt={item.title} width={200} height={118} />
+                            ?<img src={item.image_dark} alt={item.title} width={200} height={118} />
+                            :<img src={item.image_light} alt={item.title} width={200} height={118} />
                             }
                         </div>
                         )
@@ -38,8 +38,8 @@ export default function Biz(){
                         <div className="biz-field" key={item.id}>
                             {
                             bgMode === true
-                            ?<Image src={item.image_dark} alt="business image" width={200} height={118} />
-                            :<Image src={item.image_light} alt="business image" width={200} height={118} />
+                            ?<img src={item.image_dark} alt="business image" width={200} height={118} />
+                            :<img src={item.image_light} alt="business image" width={200} height={118} />
                             }
                             <h2>{item.title}</h2>
                         </div>
