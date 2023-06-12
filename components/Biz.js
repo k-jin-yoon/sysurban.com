@@ -28,8 +28,8 @@ export default function Biz(){
                             <h2>{item.title}</h2>
                             {
                             bgMode === true
-                            ?<Image src={item.image_dark} alt="business image" width={200} height={118} />
-                            :<Image src={item.image_light} alt="business image" width={200} height={118} />
+                            ?<Image src={item.image_dark} alt={item.title} width={200} height={118} />
+                            :<Image src={item.image_light} alt={item.title} width={200} height={118} />
                             }
                         </div>
                         )
