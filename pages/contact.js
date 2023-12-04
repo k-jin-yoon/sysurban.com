@@ -12,7 +12,7 @@ export default function Contact(){
             <div className="location">
                 <h4><span className="icons"><FontAwesomeIcon icon={faMapLocationDot} /></span> 오시는 길</h4>
                 <div className="addr">
-                    <h5>회사본사</h5>
+                    <h5>본사</h5>
                     <p><span className="icons"><FontAwesomeIcon icon={faBuilding} /></span> 사무실: 경기도 평택시 고덕면 울성길 169-69, 102호</p>
                     <p><span className="icons"><FontAwesomeIcon icon={faLaptopCode} /></span> 개발팀: 경기도 평택시 고덕면 울성길 169-69, 103호</p>
                 </div>
