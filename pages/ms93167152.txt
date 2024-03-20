@@ -1,0 +1,5 @@
+﻿{
+  "Description": "웹 사이트 루트의 위치 Microsoft 365에 대한 도메인 소유권 확인 파일",
+  "Domain": "sysurban.com",
+  "Id": "64da6e2d-88c9-4a78-a98a-a1df82458061"
+}
