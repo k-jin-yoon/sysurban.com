@@ -4,6 +4,42 @@ export default function Timeline(){
             <ul>
                 <li>
                     <div className="content">
+                        <h4>스마트시티 기술자문</h4>
+                        <p>스마트시티 기술기획 자문 및 컨설팅</p>
+                    </div>
+                    <div className="time">
+                        <h5>2024.01</h5>
+                    </div>
+                </li>
+                <li>
+                    <div className="content">
+                        <h4>예약시스템 유지보수</h4>
+                        <p>평택도시공사 예약시스템 유지보수 수행</p>
+                    </div>
+                    <div className="time">
+                        <h5>2024.01</h5>
+                    </div>
+                </li>
+                <li>
+                    <div className="content">
+                        <h4>강소형 스마트시티</h4>
+                        <p>강소형 스마트시티 사업기획<br/><small>(국토교통부 공모사업 선정)</small></p>
+                    </div>
+                    <div className="time">
+                        <h5>2023.04</h5>
+                    </div>
+                </li>
+                <li>
+                    <div className="content">
+                        <h4>예약시스템 유지보수</h4>
+                        <p>평택도시공사 예약시스템 유지보수 수행</p>
+                    </div>
+                    <div className="time">
+                        <h5>2023.01</h5>
+                    </div>
+                </li>
+                <li>
+                    <div className="content">
                         <h4>MOU 체결</h4>
                         <p>행정지원시스템 관련 업무제휴 협약체결<br/><small>(주식회사 오성시스템)</small></p>
                     </div>
