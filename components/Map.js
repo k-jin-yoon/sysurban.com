@@ -85,8 +85,8 @@ const Map = () => {
                     }
                     </style>
                     `
-                // const position = new window.kakao.maps.LatLng(37.0123509, 127.0578256)
-                const position = new window.kakao.maps.LatLng(37.04419362245957, 127.03340822405023)
+                const position = new window.kakao.maps.LatLng(37.0123509, 127.0578256)
+                // const position = new window.kakao.maps.LatLng(37.04419362245957, 127.03340822405023)
                 const mapContainer = document.getElementById("map");
                 const mapOption = {
                     center: position,
